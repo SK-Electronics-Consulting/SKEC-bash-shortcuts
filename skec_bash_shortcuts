@@ -1,0 +1,17 @@
+#!/bin/sh
+# SKEC shortcuts to be used within bash.
+# call this file from the end of ~/.bashrc by adding the line:
+# . "$HOME/SKEC-bash-shortcuts/skec_bash_shortcuts"
+
+# python venv
+alias sve='source venv/bin/activate'
+
+# git shortcuts
+alias gs='git status'
+alias gl='git log --oneline --graph --branches=sk*'
+alias gla='git log --oneline --graph --all'
+
+# ssh key handling
+eval "$(ssh-agent -s)"
+# TODO: figure out a way to do this without hard coding:
+# ssh-add ~/.ssh/[location]
